@@ -1,0 +1,27 @@
+/* Center the box */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+}
+
+/* Stylish box with different borders */
+.box {
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+    /* Different borders on each side */
+    border-top: 5px solid red;       /* Solid */
+    border-right: 8px dashed blue;   /* Dashed */
+    border-bottom: 10px dotted green;/* Dotted */
+    border-left: 6px double rgba(255, 166, 0, 0.736);  /* Double */
+}

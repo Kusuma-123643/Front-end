@@ -1,0 +1,61 @@
+/* Page Styling */
+body {
+    text-align: center;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Different Font Styles */
+.serif {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    color: crimson;
+}
+
+.sans-serif {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: royalblue;
+}
+
+.cursive {
+    font-family: "Brush Script MT", cursive;
+    font-size: 22px;
+    font-style: italic;
+    color: darkgreen;
+}
+
+.monospace {
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: purple;
+}
+
+/* Text Alignment & Effects */
+
+.left-text {
+    font-size: 22px;
+    text-align: left;
+    font-weight: bold;
+    color: teal;
+    text-decoration: underline;
+}
+.center-text {
+    font-size: 26px;
+    margin: 16px;
+    font-family: "Georgia", serif;
+    text-align: center;
+    color: orange;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.right-text {
+    font-size: 22px;
+    text-align: right;
+    font-weight: bold;
+    color: teal;
+    text-decoration: underline;
+}

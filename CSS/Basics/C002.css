@@ -1,0 +1,9 @@
+/* Setting background color and image */
+body {
+    background-color: lightgray; /* Fallback color */
+    background-image: url('IMAGES/OM NAMAH.jpg'); /* Background image */
+    background-size: 400px 400px; /* Cover entire page */
+    background-attachment: fixed; /* Image stays fixed */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
