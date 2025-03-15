@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Dot Notation</title>
+</head>
+<body>
+  <h3>JSON Data</h3>
+  <button onclick="showPerson()">Show Person Info</button>
+  <p id="output"></p>
+
+  <script>
+    const person = {
+      name: "kusuma",
+      age: 20,
+      city: "Srikakulam"
+    };
+
+    function showPerson() {
+      document.getElementById("output").innerText = 
+        "Name: " + person.name + ", Age: " + person.age + ", City: " + person.city;
+    }
+  </script>
+</body>
+</html>

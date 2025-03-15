@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Date & Time</title>
+</head>
+<body>
+  <h3>Click the button to see current date and time:</h3>
+  <button id="showTimeBtn">Show Date & Time</button>
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("showTimeBtn").addEventListener("click", function() {
+      const now = new Date();
+      document.getElementById("result").innerText = now;
+    });
+  </script>
+</body>
+</html>
