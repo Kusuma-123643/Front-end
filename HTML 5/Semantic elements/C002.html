@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            margin-top: 15px;
+        }
+        input, button {
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0;
+        }
+        article {
+            background: #dff0d8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <h2>Semantic Elements Example</h2>
+
+        <!-- Article Example -->
+        <article>
+            <h3>Latest News</h3>
+            <p>The new version of HTML is more powerful with semantic elements like <strong>form, table, and article</strong>.</p>
+        </article>
+
+        <!-- Table Example -->
+        <h3>Student Marks Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Math</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Emma</td>
+                <td>Science</td>
+                <td>90</td>
+            </tr>
+        </table>
+
+        <!-- Form Example -->
+        <h3>Contact Form</h3>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
