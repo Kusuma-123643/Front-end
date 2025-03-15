@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Prototype</title>
+</head>
+<body>
+  <h2>Using Prototype to Add Properties</h2>
+  <div id="output"></div>
+
+  <script>
+    function Student(name) {
+      this.name = name;
+    }
+
+    // Add property using prototype
+    Student.prototype.course = "BSc Computer Science";
+
+    const s1 = new Student("kusuma");
+
+    document.getElementById("output").innerHTML =
+      "Name: " + s1.name + "<br>Course: " + s1.course;
+  </script>
+</body>
+</html>

@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call and Apply Example</title>
+</head>
+<body>
+  <h2>call() and apply() Example</h2>
+  <div id="output"></div>
 
+  <script>
+    const person = {
+      fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + " from " + city + ", " + country;
+      }
+    };
+
+    const user = {
+      firstName: "kuppili",
+      lastName: "kusuma"
+    };
+
+    const usingCall = person.fullName.call(user, "Srikakulam", "India");
+    const usingApply = person.fullName.apply(user, ["Srikakulam", "India"]);
+
+    document.getElementById("output").innerHTML =
+      "<strong>Using call():</strong> " + usingCall + "<br><br>" +
+      "<strong>Using apply():</strong> " + usingApply;
+  </script>
+</body>
+</html>

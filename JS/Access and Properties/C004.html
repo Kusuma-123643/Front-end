@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter with Getter and Setter</title>
+</head>
+<body>
+  <h2>Counter Using Getter and Setter</h2>
+  <p>Current Count: <span id="showCount">0</span></p>
+  <button onclick="counter.value = counter.value + 1">Increment</button>
+
+  <script>
+    const counter = {
+      _count: 0,
+      get value() {
+        return this._count;
+      },
+      set value(val) {
+        this._count = val;
+        document.getElementById("showCount").innerText = this._count;
+      }
+    };
+  </script>
+</body>
+</html>
