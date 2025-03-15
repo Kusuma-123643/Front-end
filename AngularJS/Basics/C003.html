@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Angular Directives</title>
+</head>
+<body ng-init="names=['Kusuma', 'naveen', 'Sravani']">
+
+  <h3>Two-way Data Binding with ng-model</h3>
+  Enter your name: <input type="text" ng-model="yourName" />
+  <p>Hello, {{ yourName }}!</p>
+
+  <h3>ng-repeat Example</h3>
+  <ul>
+    <li ng-repeat="n in names">{{ n }}</li>
+  </ul>
+
+  <h3>ng-include Example</h3>
+  <div ng-include="'template.html'"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</body>
+</html>

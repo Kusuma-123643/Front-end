@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Scope Example</title>
+</head>
+<body>
+
+  <div ng-controller="FirstCtrl">
+    <h3>First Controller:</h3>
+    <p>Local: {{ msg }}</p>
+    <p>Global: {{ globalMsg }}</p>
+  </div>
+
+  <div ng-controller="SecondCtrl">
+    <h3>Second Controller:</h3>
+    <p>Local: {{ msg }}</p>
+    <p>Global: {{ globalMsg }}</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    var app = angular.module("myApp", []);
+
+    app.run(function($rootScope) {
+      $rootScope.globalMsg = "I am from $rootScope!";
+    });
+
+    app.controller("FirstCtrl", function($scope) {
+      $scope.msg = "Hello from FirstCtrl";
+    });
+
+    app.controller("SecondCtrl", function($scope) {
+      $scope.msg = "Hello from SecondCtrl";
+    });
+  </script>
+</body>
+</html>

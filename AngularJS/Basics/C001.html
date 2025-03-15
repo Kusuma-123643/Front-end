@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Expression and Color Box</title>
+</head>
+<body>
+  <h3>Expression Example: {{ 10 + 20 }}</h3>
+
+  <h3>Change Textbox Background</h3>
+  Enter color: 
+  <input type="text" ng-model="boxColor" placeholder="e.g. red, blue" />
+  <br><br>
+  <input type="text" style="padding:10px;" ng-style="{'background-color': boxColor}" placeholder="Color Box" />
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</html>
