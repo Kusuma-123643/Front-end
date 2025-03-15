@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Events</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="EventCtrl">
+
+  <h2>AngularJS Events</h2>
+
+  <button ng-click="sayHello()">Click Me</button>
+  <p>{{ message }}</p>
+
+  <div style="width:300px;height:100px;border:1px solid black;" 
+       ng-mousemove="showCoords($event)">
+    Move your mouse here
+  </div>
+  <p>{{ coords }}</p>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('EventCtrl', function($scope) {
+      $scope.message = "";
+      $scope.coords = "";
+
+      $scope.sayHello = function() {
+        $scope.message = "Hello from ng-click!";
+      };
+
+      $scope.showCoords = function(event) {
+        $scope.coords = "X: " + event.clientX + " Y: " + event.clientY;
+      };
+    });
+  </script>
+
+</body>
+</html>

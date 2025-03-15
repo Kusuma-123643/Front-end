@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="DomCtrl">
 
+  <h2>DOM Example with ng-show, ng-hide, ng-disabled</h2>
+
+  <input type="checkbox" ng-model="showMsg"> Show Message<br><br>
+
+  <p ng-show="showMsg">Hello! This is shown with ng-show.</p>
+  <p ng-hide="showMsg">This message is hidden when checkbox is checked.</p>
+
+  <br><input type="text" ng-model="userInput" placeholder="Type something">
+  <button ng-disabled="!userInput">Submit</button>
+
+  <script>
+    angular.module('myApp', []).controller('DomCtrl', function($scope) {
+      $scope.showMsg = false;
+      $scope.userInput = "";
+    });
+  </script>
+
+</body>
+</html>

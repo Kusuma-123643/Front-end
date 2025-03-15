@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch from MySQL</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="FetchCtrl">
+
+  <h2>Student List</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr ng-repeat="s in students">
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+    </tr>
+  </table>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('FetchCtrl', function($scope, $http) {
+      $http.get("getData.php")
+        .then(function(response) {
+          $scope.students = response.data;
+        });
+    });
+  </script>
+
+</body>
+</html>
