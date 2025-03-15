@@ -1,0 +1,49 @@
+/* Apply background color to every even section */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Pseudo-class: Change link color when hovered */
+.nav-list a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Pseudo-class: Apply style when input is focused */
+.input-field:focus {
+    border: 2px solid blue;
+    background-color: lightyellow;
+}
+
+/* Pseudo-class: Style every second list item differently */
+.services-list li:nth-child(even) {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+/* Pseudo-element: Add a bullet before every service */
+.services-list li::before {
+    content: "✔ ";
+    color: green;
+}
+
+/* Pseudo-element: Style the first letter of a paragraph */
+.intro::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+}
+
+/* Pseudo-element: Add content after "Back to Top" links */
+.back-link::after {
+    content: " ⬆";
+    color: gray;
+}
+
+/* Pseudo-element: Highlight text when selected */
+::selection {
+    background-color: yellow;
+    color: black;
+}
