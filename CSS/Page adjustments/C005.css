@@ -1,0 +1,29 @@
+/* Applying multiple background images */
+.multi-bg {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+
+    /* Multiple background images */
+    background-image: 
+        url('Flowers/flower.avif'), 
+        url('Flowers/flower 2.jpg'), 
+        url('Flowers/flower 3.jpg');
+    
+    /* Setting different background sizes */
+    background-size: 50px, 100px, cover;  
+
+    /* Adjust background positions */
+    background-position: left top, right bottom, center;  
+
+    /* Background should not repeat */
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}

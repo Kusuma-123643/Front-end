@@ -1,0 +1,40 @@
+/* Visibility Properties */
+.visible {
+    visibility: visible; /* Default: Visible */
+}
+
+.hidden {
+    visibility: hidden; /* Hidden but space is reserved */
+}
+
+.collapse {
+    visibility: collapse; /* Similar to hidden but collapses table rows */
+}
+
+/* Display Properties */
+.none {
+    display: none; /* Completely removed from layout */
+}
+
+.inline {
+    display: inline; /* Inline like text */
+    background-color: lightgray;
+}
+
+.block {
+    display: block; /* Takes full width */
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.contents {
+    display: contents; /* Acts as if no div exists */
+    color: red;
+}
+
+.list-item {
+    display: list-item; /* Behaves like a list item */
+    background-color: lightgreen;
+    padding: 5px;
+    margin-left: 20px;
+}

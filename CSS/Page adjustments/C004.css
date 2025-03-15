@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Box 1 - Padding 20px, Margin 30px */
+.box1 {
+    background-color: lightblue;
+    padding: 20px;  /* Space inside */
+    margin: 30px;   /* Space outside */
+    border: 2px solid rgb(78, 132, 186);
+}
+
+/* Box 2 - Padding 40px, Margin 10px */
+.box2 {
+    background-color: lightcoral;
+    padding: 40px;  /* More space inside */
+    margin: 10px;   /* Less space outside */
+    border: 2px solid red;
+}
+
+/* Box 3 - Padding 10px, Margin 50px */
+.box3 {
+    background-color: lightgreen;
+    padding: 10px;  /* Less space inside */
+    margin: 50px;   /* More space outside */
+    border: 2px solid green;
+}
