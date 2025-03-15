@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="formApp">
+<head>
+  <title>Form Elements</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="FormCtrl">
+
+  <h2>Form Elements</h2>
+
+  <form>
+    Name: <input type="text" ng-model="user.name"><br><br>
+
+    Gender:
+    <input type="radio" ng-model="user.gender" value="Male"> Male
+    <input type="radio" ng-model="user.gender" value="Female"> Female<br><br>
+
+    Skills:
+    <input type="checkbox" ng-model="user.skill1"> HTML
+    <input type="checkbox" ng-model="user.skill2"> CSS<br><br>
+
+    City:
+    <select ng-model="user.city">
+      <option value="Srikakulam">Srikakulam</option>
+      <option value="Vizag">Vizag</option>
+    </select><br><br>
+
+    <p>{{ user }}</p>
+  </form>
+
+  <script>
+    angular.module("formApp", [])
+      .controller("FormCtrl", function($scope) {
+        $scope.user = {};
+      });
+  </script>
+
+</body>
+</html>

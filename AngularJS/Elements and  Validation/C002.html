@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="validateApp">
+<head>
+  <title>Form Validation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="ValidateCtrl">
 
+  <h2>Form Validation</h2>
+
+  <form name="myForm">
+    Email: <input type="email" name="email" ng-model="user.email" required>
+    <span ng-show="myForm.email.$touched && myForm.email.$invalid">Invalid Email</span>
+    <br><br>
+
+    Age: <input type="number" name="age" ng-model="user.age" required>
+    <span ng-show="user.age < 18">Must be 18+</span>
+    <br><br>
+
+    <button ng-disabled="myForm.$invalid">Submit</button>
+  </form>
+
+  <script>
+    angular.module("validateApp", [])
+      .controller("ValidateCtrl", function($scope) {
+        $scope.user = {};
+      });
+  </script>
+
+</body>
+</html>

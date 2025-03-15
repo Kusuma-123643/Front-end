@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="animApp">
+<head>
+  <title>ng-show/ng-hide with Animation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
+  <style>
+    .fade {
+      transition: all 0.5s linear;
+      opacity: 1;
+    }
+
+    .fade.ng-hide {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body ng-controller="AnimCtrl">
+
+  <button ng-click="toggle()">Toggle Message</button>
+  <p class="fade" ng-show="showMessage">Hello! This text will fade in and out.</p>
+
+  <script>
+    angular.module("animApp", ['ngAnimate'])
+      .controller("AnimCtrl", function($scope) {
+        $scope.showMessage = true;
+
+        $scope.toggle = function() {
+          $scope.showMessage = !$scope.showMessage;
+        };
+      });
+  </script>
+
+</body>
+</html>
