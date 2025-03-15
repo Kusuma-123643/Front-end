@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>for...in Loop</title>
+</head>
+<body>
+  <h2>for...in Loop Example</h2>
+  <div id="output"></div>
+
+  <script>
+    const student = {
+      name: "harsha",
+      age: 20,
+      course: "BSc"
+    };
+
+    let result = "";
+    for (let key in student) {
+      result += key + ": " + student[key] + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+  </script>
+</body>
+</html>

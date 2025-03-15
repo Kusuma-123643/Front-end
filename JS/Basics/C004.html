@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Access</title>
+</head>
+<body>
+  <h2>Access Object Properties</h2>
+  <div id="output"></div>
+
+  <script>
+    const person = {
+      firstname: "kuppili",
+      lastname: "kusuma"
+    };
+
+    let output = "Dot notation: " + person.firstname + "<br>";
+    output += "Bracket notation: " + person["lastname"];
+
+    document.getElementById("output").innerHTML = output;
+  </script>
+</body>
+</html>

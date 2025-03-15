@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort Fruits</title>
+</head>
+<body>
+  <h2>Sort Fruits in Descending Order</h2>
+  <ul id="fruitList"></ul>
+  <button onclick="sortFruits()">Sort Descending</button>
+
+  <script>
+    let fruits = ["Banana", "Apple", "Mango", "Orange"];
+
+    function displayFruits() {
+      document.getElementById("fruitList").innerHTML =
+        fruits.map(fruit => `<li>${fruit}</li>`).join('');
+    }
+
+    function sortFruits() {
+      fruits.sort().reverse();
+      displayFruits();
+    }
+
+    displayFruits(); // Show initial list
+  </script>
+</body>
+</html>
 

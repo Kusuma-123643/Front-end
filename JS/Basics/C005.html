@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Variable Hoisting</title>
+</head>
+<body>
+  <h2>Variable Hoisting Example</h2>
+  <div id="output"></div>
+
+  <script>
+    hoistingText = "Value of y before declaration: " + y;
+    var y = 10;
+
+    document.getElementById("output").innerHTML = hoistingText;
+  </script>
+</body>
+</html>

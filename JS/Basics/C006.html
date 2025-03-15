@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Strict Mode</title>
+</head>
+<body>
+  <h2>Strict Mode Example</h2>
+  <div id="output"></div>
+
+  <script>
+    function strictExample() {
+      "use strict";
+      let result = "";
+      try {
+        undeclaredVar = 50; 
+        result = "No error occurred (this should not happen)";
+      } catch (error) {
+        result = "Error: " + error.message;
+      }
+      return result;
+    }
+
+    document.getElementById("output").innerHTML = strictExample();
+  </script>
+</body>
+</html>
