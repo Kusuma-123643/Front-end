@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Table with JSON</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    .odd-row { background-color: #f2f2f2; }
+    .even-row { background-color: #d9edf7; }
+    table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  </style>
+</head>
+<body ng-controller="TableCtrl">
+
+  <h2>Student Table (Click headers to sort)</h2>
+
+  <table>
+    <tr>
+      <th ng-click="sortBy('name')">Name</th>
+      <th ng-click="sortBy('age')">Age</th>
+      <th ng-click="sortBy('grade')">Grade</th>
+      <th># (Index)</th>
+    </tr>
+    <tr ng-repeat="student in students | orderBy:sortColumn" ng-class="{'odd-row': $odd, 'even-row': $even}">
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.grade }}</td>
+      <td>{{ $index + 1 }}</td>
+    </tr>
+  </table>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('TableCtrl', function($scope) {
+      $scope.sortColumn = 'name';
+
+      $scope.sortBy = function(column) {
+        $scope.sortColumn = column;
+      };
+
+      // Sample JSON data
+      $scope.students = [
+        { name: "Madhu", age: 20, grade: "A" },
+        { name: "Kusuma", age: 21, grade: "B" },
+        { name: "Yamini", age: 19, grade: "A+" },
+        { name: "Bhumi", age: 22, grade: "C" }
+      ];
+    });
+  </script>
+</body>
+</html>
