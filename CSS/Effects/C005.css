@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.opacity-img {
+    width: 300px; /* Adjust image size */
+    height: auto;
+    opacity: 0.5; /* 50% opacity */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.opacity-img:hover {
+    opacity: 1; /* Full visibility on hover */
+}

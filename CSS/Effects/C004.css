@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    overflow: scroll; /* Enables scrolling when content overflows */
+    background-color: lightgray;
+}
