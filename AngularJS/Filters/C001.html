@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Filters</title>
+</head>
+<body ng-controller="FilterCtrl">
+
+  <h3>Date Filter: {{ today | date:'fullDate' }}</h3>
+  <h3>Uppercase: {{ name | uppercase }}</h3>
+  <h3>Lowercase: {{ name | lowercase }}</h3>
+  <h3>Number: {{ number | number:2 }}</h3>
+  <h3>Custom Filter (Reverse): {{ name | reverse }}</h3>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="filters.js"></script>
+</body>
+</html>

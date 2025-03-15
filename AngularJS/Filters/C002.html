@@ -1,1 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Services</title>
+</head>
+<body ng-controller="ServiceCtrl">
+  <h3>Current URL: {{ url }}</h3>
+  <h3>Message after 2 seconds: {{ delayedMessage }}</h3>
+  <h3>Custom Service Output: {{ greetMessage }}</h3>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="services.js"></script>
+</body>
+</html>
