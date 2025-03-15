@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table with fixed layout */
+.fixed-table {
+    table-layout: fixed;
+}
+
+/* Table with default (none) layout */
+.none-table {
+    table-layout: auto; /* Default behavior */
+}

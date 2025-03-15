@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.grid-basic, .grid-columns, .grid-merged {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-basic {
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+}
+
+.grid-columns {
+    grid-template-columns: 2fr 1fr 1fr; /* First column is twice the size */
+}
+
+.grid-merged {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Merge first item across 2 columns */
+.item1 {
+    grid-column: span 2;
+}

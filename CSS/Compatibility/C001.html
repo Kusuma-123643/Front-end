@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout Example</title>
+    <link rel="stylesheet" href="C001.css">
+</head>
+<body>
+
+    <h2>Table with <code>table-layout: fixed</code></h2>
+    <table class="fixed-table">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Short text</td>
+            <td>Some longer content that will be cut off</td>
+            <td>More content</td>
+        </tr>
+    </table>
+
+    <h2>Table with <code>table-layout: none</code> (Default)</h2>
+    <table class="none-table">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Short text</td>
+            <td>Some longer content that will stretch the column width</td>
+            <td>More content</td>
+        </tr>
+    </table>
+
+</body>
+</html>
